@@ -1,10 +1,6 @@
 
 def main():
 	#write your code here
-	num_1 = 0
-	num_2 = 0
-	
-
 	num_1 = input("Enter the first number: ")
 
 	while not num_1.isnumeric():
@@ -18,6 +14,10 @@ def main():
 		num_2 = input("Enter the second number: ")
 
 	operator = input("Choose the operation (+, -, /, *): ")
+	opertators = ["+","-","/","*"]
+	while operator not in opertators:
+		print("operator is not valid")
+		operator = input("Choose the operation (+, -, /, *): ")
 
 	if operator == "+":
     		answer = int(num_1) + int(num_2)
@@ -31,12 +31,9 @@ def main():
 	elif operator == "*":
     		answer = int(num_1) * int(num_2)
     		print ("The answer is " + str(int(answer)))
-	else:
-    		print("please choose an operator")
+	
     		
 	
-
-
 
 if __name__ == '__main__':
 	main()
